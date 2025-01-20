@@ -10,7 +10,7 @@ const Info = ({ Changestate, nftitem }) => {
             <div className="flex items-center justify-center p-6 gap-4 border rounded-lg text-white min-h-screen">
                 <div className="flex flex-col flex-grow">
                     <h1 className="text-3xl font-bold bg-gray-800 p-4 rounded-t-lg">NFT Name: {nftitem.name}</h1>
-                    <div className="bg-gray-800 p-4 rounded-b-lg">
+                    <div className=" bg-gray-800 p-4 rounded-b-lg">
                         <p className="font-semibold">Item Description:</p>
                         <p>{nftitem.description}</p>
                     </div>

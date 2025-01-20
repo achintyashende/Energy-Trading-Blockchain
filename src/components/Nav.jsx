@@ -10,11 +10,12 @@ function Nav({ account, loadProvider, loading }) {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between p-4">
           <div className="flex cursor-pointer items-center space-x-3 rtl:space-x-reverse">
-            <Link to='/' className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white no-underline">AssetTokens</Link>
+            <Link to='/' className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white no-underline">CleanToken</Link>
           </div>
 
           <div className="flex justify-around w-full max-w-md">
-            <Link to="/home" className="no-underline text-gray-200 text-lg font-semibold transition-colors duration-300 hover:text-white hover:font-bold">Home</Link>
+            <Link to="/" className="no-underline text-gray-200 text-lg font-semibold transition-colors duration-300 hover:text-white hover:font-bold">Home</Link>
+            <Link to="/home" className="no-underline text-gray-200 text-lg font-semibold transition-colors duration-300 hover:text-white hover:font-bold">Marketplace</Link>
             <Link to="/create" className="no-underline text-gray-200 text-lg font-semibold transition-colors duration-300 hover:text-white hover:font-bold">Create</Link>
             {/* <Link to="/my-listed-nfts" className="no-underline text-gray-200 text-lg font-semibold transition-colors duration-300 hover:text-white">My Listed Items</Link>
         <Link to="/my-purchases" className="no-underline text-gray-200 text-lg font-semibold transition-colors duration-300 hover:text-white">My Purchases</Link> */}
