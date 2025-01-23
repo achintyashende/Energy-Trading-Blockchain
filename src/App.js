@@ -9,6 +9,7 @@ import Hero from './components/Home.jsx';
 import Create from './components/Create.jsx';
 import Nav from './components/Nav.jsx';
 import First from './components/First.js';
+import About from './components/About.jsx';
 
 function App() {
 
@@ -92,8 +93,9 @@ function App() {
             ) : (
               <Routes>
                 <Route path='/' element={<First loadProvider={loadProvider} loading={loading} />} />
-                <Route path='/home' element={<Hero marketplace={marketplace} nftItem={nftItem} account={account} />} />
+                <Route path='/marketplace' element={<Hero marketplace={marketplace} nftItem={nftItem} account={account} />} />
                 <Route path='/create' element={<Create marketplace={marketplace} />} />
+                <Route path='/about' element={<About />} />
                 {/* <Route path='/my-listed-nfts' element={<MyItem marketplace={marketplace} account={account} />} /> */}
                 {/* <Route path='/my-purchases' element={<MyPurchases marketplace={marketplace} nft={nft} account={account} />} /> */}
                 {/* <Route path='/my-purchases' element={<Purchaes marketplace={marketplace} account={account} />} /> */}

@@ -151,20 +151,20 @@ const Home = ({ marketplace, account }) => {
       {toggle ? (
         <Info Changestate={() => setToggle(false)} nftitem={nftitem} />
       ) : (
-        <div className="flex justify-center min-h-screen">
+        <div className="flex justify-center min-h-screen ">
           {items.length > 0 ? (
-            <div className="container mx-auto mt-8">
+            <div className="container mx-auto mt-8 ">
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {items.map((item, idx) => (
-                  <div key={idx} className="bg-gray-100 rounded-lg shadow-md dark:bg-gray-800 hover:transform hover:scale-105 transition-transform duration-300">
+                  <div key={idx} className="bg-gray-100 border-white border-2 rounded-lg shadow-md shadow-gray-600 dark:bg-lime-500 hover:transform hover:scale-105 transition-transform duration-300">
                     <img
                       className="rounded-t-lg object-cover w-full h-56"
                       src={item.image}
                       alt="flower"
                     />
                     <div className="p-2">
-                      <h5 className="text-xl font-semibold text-blue-600 dark:text-blue-400">{item.name}</h5>
-                      <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                      <h5 className="text-xl font-semibold text-black dark:text-gray-400">{item.name}</h5>
+                      <p className="mt-2 text-sm text-white dark:text-gray-400">
                         <strong>{ethers.utils.formatUnits(item.totalPrice, "ether")} BIT</strong><br />
                         <strong>Total Minted: {item.num}</strong><br />
                         <strong>Remaining: {item.remaining}</strong>
@@ -173,7 +173,7 @@ const Home = ({ marketplace, account }) => {
                         onChange={(event) => handleChange(idx, event)}
                         value={selectedNumbers[idx] || ""}
                         id="underline_select"
-                        className="block py-1 px-0 w-full text-sm text-gray-200 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer font-bold bg-dark-grey transition-all duration-300 ease-in-out"
+                        className="block w-full text-sm text-gray-200 bg-transparent border-0  rounded-md px-2 border-gray-200 appearance-none dark:text-black  dark:border-green-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer font-bold bg-dark-grey transition-all duration-300 ease-in-out"
                       >
                         <option value="" className="bg-dark-grey">Choose number</option>
                         <option value="1" className="bg-dark-grey text-black">1</option>
@@ -185,11 +185,15 @@ const Home = ({ marketplace, account }) => {
                         <option value="7" className="bg-dark-grey text-black">7</option>
                         <option value="8" className="bg-dark-grey text-black">8</option>
                       </select>
-                      <button
+                      {/* <button
                         onClick={() => RentItems(item, idx)}
                         className="mt-4 w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-transform transform duration-300 bg-gradient-to-r from-blue-500 to-purple-600 border border-transparent rounded-lg shadow-lg hover:scale-105 hover:from-blue-600 hover:to-purple-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                      > */}
+                      <button
+                        onClick={() => RentItems(item, idx)}
+                        className="mt-4 w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-transform transform duration-300 bg-gradient-to-r from-black to-gray-900 border border-transparent rounded-lg shadow-lg hover:scale-105 hover:from-black hover:to-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-600"
                       >
-                        Rent
+                        Buy Energy
                         <svg
                           className="rtl:rotate-180 w-4 h-4 inline-block ml-2 -mt-px"
                           xmlns="http://www.w3.org/2000/svg"
