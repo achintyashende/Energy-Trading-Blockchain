@@ -25,7 +25,7 @@ function App() {
         await window.ethereum.request({ method: 'eth_requestAccounts' });
         await window.ethereum.request({
           method: 'wallet_switchEthereumChain',
-          params: [{ chainId: '0x56b29' }], //bifnity code // chainId must be in hexadecimal numbers
+          params: [{ chainId: '0xaef3' }], //bifnity code // chainId must be in hexadecimal numbers
         });
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const network = await provider.getNetwork();
@@ -33,7 +33,7 @@ function App() {
 
         // 355113 same 0x56b29
         // Check if the chain ID is as expected
-        if (network.chainId !== 355113) {
+        if (network.chainId !== 44787) {
           alert('Please switch to the correct network.');
           return;
         }
@@ -56,7 +56,8 @@ function App() {
         // const marketplaceAddress = "0x830A7594eF91d10662F8B623BB65b290a7a08143";  //bitfinty ICP to sender
 
 
-        const marketplaceAddress = "0x2d4355D6a616D23Ca259a5875454327708c7A1eB";  //bitfinty ICP to sender
+        // const marketplaceAddress = "0x2d4355D6a616D23Ca259a5875454327708c7A1eB";  //bitfinty ICP to sender
+        const marketplaceAddress = "0x372A29ccfE8fFb2FE0079C453d104C247A50edeE";  //CELO ALFOJORES to sender
         const marketplaceContract = new ethers.Contract(
           marketplaceAddress,
           marketplace_abi,
