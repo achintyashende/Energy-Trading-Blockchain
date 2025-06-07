@@ -162,7 +162,7 @@ const Create = ({ marketplace }) => {
       <div className="min-h-screen flex justify-center items-center">
   <main className="container mx-auto px-4">
     <div className="content text-white shadow-lg rounded-lg p-5 flex flex-col items-center">
-      <div className="space-y-8 w-full max-w-[500px]">
+      <div className=" w-full max-w-[500px]">
         <Row className="g-4">
           <Form.Group>
             <Form.Label className="text-lg">Upload Thumbnail Image</Form.Label>
@@ -172,7 +172,7 @@ const Create = ({ marketplace }) => {
               name="image"
               accept="image/*" // Only accept image files
               onChange={(event) => changeHandler(event, 'image')}
-              className="max-w-[500px] w-full"
+              className="max-w-[700px] w-full text-lg p-3 border border-gray-300 rounded-lg focus:outline-none "
             />
           </Form.Group>
           {/* <Form.Group>

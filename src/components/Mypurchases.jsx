@@ -13,7 +13,7 @@ export default function MyPurchases({ marketplace, nft, account }) {
 
 
   const loadPurchasedItems = async () => {
-   
+  
       const filter =  marketplace.filters.Bought(null,null,null,null,null,account)
       
       const results = await marketplace.queryFilter(filter)
@@ -89,9 +89,9 @@ export default function MyPurchases({ marketplace, nft, account }) {
                     </h5>
                 
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                   <strong>{ethers.utils.formatEther(item.totalPrice)} ETH</strong>
+                    <strong>{ethers.utils.formatEther(item.totalPrice)} ETH</strong>
                 </p>
-               
+              
             </div>
                 </div>
             ))}

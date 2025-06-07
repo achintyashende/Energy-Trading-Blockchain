@@ -10,6 +10,7 @@ import Create from './components/Create.jsx';
 import Nav from './components/Nav.jsx';
 import First from './components/First.js';
 import About from './components/About.jsx';
+import MyPurchases from './components/Mypurchases.jsx';
 
 function App() {
 
@@ -99,7 +100,7 @@ function App() {
                 <Route path='/about' element={<About />} />
                 {/* <Route path='/my-listed-nfts' element={<MyItem marketplace={marketplace} account={account} />} /> */}
                 {/* <Route path='/my-purchases' element={<MyPurchases marketplace={marketplace} nft={nft} account={account} />} /> */}
-                {/* <Route path='/my-purchases' element={<Purchaes marketplace={marketplace} account={account} />} /> */}
+                {/* <Route path='/my-purchases' element={<MyPurchases marketplace={marketplace} account={account} />} /> */}
               </Routes>
             )}
         </div>
